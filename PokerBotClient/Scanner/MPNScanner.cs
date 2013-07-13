@@ -42,8 +42,6 @@ namespace PokerBotClient
         private readonly Regex playerSitDownReg = new Regex(@"> (?<name>[a-zA-Z0-9-_\s]*) sits down");
         private readonly Regex playerPostedToPlay = new Regex(@"> (?<name>[a-zA-Z0-9-_\s]*) posted to play ..(?<val>[0-9\.]*).");
 
-
-
         private readonly Regex numberOfGameReg = new Regex(@"> Game # (?<game>[0-9,]*) starting");
         private readonly Regex myCardsReg = new Regex(@"> Dealing Hole Cards .(?<cards>.*[cdhs] .*[cdhs]).");
 
