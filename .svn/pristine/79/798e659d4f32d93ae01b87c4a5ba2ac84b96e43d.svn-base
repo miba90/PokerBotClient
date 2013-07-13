@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Comment CommentText="Klasa TableInfo ma kolekcje oponentów">
+    <Position X="21.715" Y="13.545" Height="0.573" Width="1.7" />
+  </Comment>
+  <Comment CommentText="GameManager zawiera kolekcje Hands i kolekcje Tables">
+    <Position X="14.408" Y="18.085" Height="0.57" Width="1.7" />
+  </Comment>
+  <Comment CommentText="GameManager posiada kolekcje scannerów">
+    <Position X="16.234" Y="18.594" Height="0.516" Width="1.521" />
+  </Comment>
+  <Comment CommentText="Musze rozwazyc przekazywanie playersCollection poniewaz wystarczy tylko turn">
+    <Position X="7.79" Y="14.626" Height="0.771" Width="2.304" />
+  </Comment>
+  <Comment CommentText="Klasa Table jest być moze do usunięcia">
+    <Position X="12.887" Y="20.449" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Niebezpieczna zmiana kolejności enumów ze wzgledu na ilosc raisow">
+    <Position X="23.875" Y="28.501" Height="0.75" Width="1.7" />
+  </Comment>
+  <Class Name="PokerBotClient.MainForm">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="PokerBotClient.MainForm.turnDel" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>MainForm.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="PokerBotClient.MainForm.riverDel" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>MainForm.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="PokerBotClient.MainForm.preFlopDel" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>MainForm.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="PokerBotClient.MainForm.flopDel" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>MainForm.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>QgAACQABACgAEMEgDACAABCioFAEQAAgIgAgAgAAAAg=</HashCode>
+      <FileName>MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PokerBotClient.Program" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PokerBotClient.Properties.Resources" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PokerBotClient.Properties.Settings" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PokerBotClient.Hand">
+    <Position X="16.25" Y="23" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAIAAA=</HashCode>
+      <FileName>Hand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="GamePlan" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PokerBotClient.Table">
+    <Position X="12.25" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Table.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PokerBotClient.Model.Model">
+    <Position X="2.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Model\Model.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PokerBotClient.Model.PreFlopPlan">
+    <Position X="31.5" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\PreFlopLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PokerBotClient.Model.FlopPlan">
+    <Position X="29.25" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAEAIAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Model\FlopLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PokerBotClient.Model.TurnPlan">
+    <Position X="27" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAJAAAACAAAA=</HashCode>
+      <FileName>Model\TurnLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PokerBotClient.Model.RiverPlan">
+    <Position X="24.75" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAEAAAAABAAAA=</HashCode>
+      <FileName>Model\RiverLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PokerBotClient.Model.GamePlan">
+    <Position X="22.5" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEQAAAAAAAAAAAABAAAAEAAAABAAAAAAAA=</HashCode>
+      <FileName>Model\GameLine.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TableInfo" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PokerBotClient.Model.TableInfo">
+    <Position X="21.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIEAQBABAAAQAAAAAABAAAgAAIAIAACAKAAA=</HashCode>
+      <FileName>Model\TableInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PokerBotClient.Model.PreFlopStats">
+    <Position X="23.25" Y="1.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAUAC6gDAAsggAAAEAAAABAIAAAABACIgAIQiBAIE=</HashCode>
+      <FileName>Model\Opponents\PreFlopStats.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PokerBotClient.Model.PostFlopStats">
+    <Position X="27.25" Y="1.5" Width="1.5" />
+    <Members>
+      <Field Name="flopFoldToCbet3BetPot" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>CAAAAAgQEAAEQQABBEEAAQggxAAIAJQAAASQgAAogIA=</HashCode>
+      <FileName>Model\Opponents\PostFlopStats.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PokerBotClient.Model.Player">
+    <Position X="25.25" Y="6.25" Width="1.5" />
+    <AssociationLine Name="PostFlopStats" Type="PokerBotClient.Model.PostFlopStats" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="26.406" Y="6.25" />
+        <Point X="26.406" Y="3.625" />
+        <Point X="27.25" Y="3.625" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="PreFlopStats" Type="PokerBotClient.Model.PreFlopStats" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="25.625" Y="6.25" />
+        <Point X="25.625" Y="3.632" />
+        <Point X="24.75" Y="3.632" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EAIAKwBCAAgAAAAEwAgAQMQBAUAEASFAAEAAABAAACc=</HashCode>
+      <FileName>Model\Opponents\Opponent.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PostFlopStats" />
+      <Property Name="PreFlopStats" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PokerBotClient.GameManager">
+    <Position X="16.25" Y="19.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAABCAAEAAGAgAAAAAAAQgAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>GameManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Hand" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PokerBotClient.Scanner">
+    <Position X="16.25" Y="13.75" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="PokerBotClient.Scanner.PreFlopDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Scanner\Scanner.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="PokerBotClient.Scanner.FlopDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Scanner\Scanner.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="PokerBotClient.Scanner.TurnDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Scanner\Scanner.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="PokerBotClient.Scanner.RiverDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Scanner\Scanner.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="PokerBotClient.Scanner.EndOfHandDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Scanner\Scanner.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AQQQAIAEQACAAEBAAAIBAAAAAAABAAAAAAQAgAAAAAA=</HashCode>
+      <FileName>Scanner\Scanner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PokerBotClient.MPNScanner">
+    <Position X="12.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YQBQQAIkgAAQqUYMPWIBSoAIDgBJAkAEABQSoIIKAgA=</HashCode>
+      <FileName>Scanner\MPNScanner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PokerBotClient.FTPScanner">
+    <Position X="16.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAQAAAEAAAAAEAACAIBAAAAAAABAAAAAAQAgAAAAAA=</HashCode>
+      <FileName>Scanner\FTPScanner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PokerBotClient.Card">
+    <Position X="29.25" Y="14" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="PokerBotClient.Card.CardValueEnum" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Model\Card.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="PokerBotClient.Card.CardColorEnum" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Model\Card.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAACCAAAAggAAAQAA=</HashCode>
+      <FileName>Model\Card.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PokerBotClient.CardsCollection">
+    <Position X="27.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAMAAAAAAAAAABAEAAgAAAAAAAACAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Model\CardCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PokerBotClient.Model.HandArgs">
+    <Position X="5.75" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAAAEAAAAAAAAAAAAAQAAAAEAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Model\HandArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PokerBotClient.Model.TurnArgs">
+    <Position X="5.75" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAARAAAAAQAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\HandArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PokerBotClient.Model.EndOfHandArgs">
+    <Position X="10.25" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\HandArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PokerBotClient.Model.PreFlopArgs">
+    <Position X="1.25" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAA=</HashCode>
+      <FileName>Model\HandArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PokerBotClient.Model.FlopArgs">
+    <Position X="3.5" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAABAAAAAAIAAAACAAAAA=</HashCode>
+      <FileName>Model\HandArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PokerBotClient.Model.PlayersCollection">
+    <Position X="23.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAABBgAAAAlAAAAEAgCEgQIAAABAAEABA=</HashCode>
+      <FileName>PlayersCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PokerBotClient.Model.Decision">
+    <Position X="33.75" Y="27" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAEAAAAAAAAAAAAACAAAAAgAAACAAA=</HashCode>
+      <FileName>Model\Decision.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PokerBotClient.Model.DecisionCollection">
+    <Position X="34.75" Y="23.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAQIAAQQCIAEEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Decision.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PokerBotClient.Model.RiverArgs">
+    <Position X="8" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAQAAIAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\HandArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="PokerBotClient.Model.Position">
+    <Position X="30.75" Y="27.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAogAAAAAAACIAAAAgAAAAAgA=</HashCode>
+      <FileName>Model\PositionEnum.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="PokerBotClient.Model.IModel">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Model\IModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="PokerBotClient.Model.StreetKind">
+    <Position X="27.75" Y="26.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAACAAEAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\StreetKind.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PokerBotClient.EventsMaskEnum">
+    <Position X="18.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgBAAAAAAAAAAACAAEAAAAABAAAAABAAAEQAAA=</HashCode>
+      <FileName>Model\EventsMaskEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PokerBotClient.Model.PositionEnum">
+    <Position X="30.75" Y="30.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAgAAAAAAAIAAAAAAAAAAAAAAAAIAwAAAAAAAAAAA=</HashCode>
+      <FileName>Model\PositionEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PokerBotClient.Model.BasicDecision">
+    <Position X="35.5" Y="27" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAgAAAAAAIACAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Model\Decision.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
